@@ -3,6 +3,66 @@
     --secondary-color: #f4f4f4;
     --text-color: #555;
     --link-color: #007bff;
+    --card-background: #fff;
+}
+
+body.dark-theme {
+    --primary-color: #2c3e50;
+    --secondary-color: #1a1a1a;
+    --text-color: #ecf0f1;
+    --link-color: #3498db;
+    --card-background: #2e4a64;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative; /* Needed for positioning the toggle button */
+}
+
+/* Add styles for the theme toggle button */
+#theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#theme-toggle:hover {
+    opacity: 0.8;
+}
+
+/* Update section and footer styles to use the new variables */
+section, footer {
+    background: var(--card-background);
+}
+
+.project-card {
+    background: var(--card-background);
+}
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #f4f4f4;
+    --text-color: #555;
+    --link-color: #007bff;
     --border-radius: 8px;
 }
 
